@@ -1,5 +1,5 @@
 # laser
-Hokuyo激光雷达的使用
+Hokuyo激光雷达的使用  
 1.下载urg_node 及相关支持包
   source /opt/ros/indigo/setup.bash
   mkdir -p ~/catakin_ws/src
@@ -32,6 +32,23 @@ Hokuyo激光雷达的使用
  
  3.测试
  rosrun urg_node urg_node _ip_address:=192.168.0.10
- rviz
+ rviz  
+  
+#velodyne vlp16激光雷达使用（192.168.1.201）
+1.配置ip
+  192.168.1.77 255.255.255.0
+2.安装依赖
+  sudo apt-get install ros-noetic-velodyne
+3.创建项目文件
+  mkdir -p catkin_velodyne/src
+  cd catkin_velodyne/src
+  git clone https://github.com/ros-drivers/velodyne.git
+  cd ..
+  catkin_make
+  source devel/setup.bash
+4.测试  
+  roslaunch velodyne_pointcloud VLP16_points.launch
+  rosrun rviz rviz -f velodyne
 
+  
 
