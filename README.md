@@ -45,7 +45,7 @@
 
 ###  3.测试
 
- rosrun urg_node urg_node _ip_address:=192.168.0.10
+ rosrun urg_node urg_node _ip_address:=192.168.0.10  
  rviz  
 
 ## #velodyne vlp16激光雷达使用（192.168.1.201）
