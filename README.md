@@ -18,7 +18,7 @@
  cd ~/catkin_ws/src
  git clone https://github.com/ros-perception/laser_proc.git
  git clone https://github.com/ros-drivers/urg_c.git
- cd ~/catkin_ws
+ cd ..  
  catkin_make
 ```
 
